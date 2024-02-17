@@ -5,6 +5,17 @@
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
 
 tasks:
-  - command: python app.py
+  - init: pip install -r requirements.txt  # Add a requirements.txt file
+    command: python app.py
+      python db_setup.py  # Assuming you have a database setup script 
 
+vscode:
+  extensions:
+    - ms-python.python  # Python 
+    - esbenp.prettier-vscode  # Code formatting (optional)
+    # ... More extensions as needed 
+
+ports:
+  - port: 5000 
+    onOpen: open-preview
 
