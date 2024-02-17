@@ -1,0 +1,34 @@
+[
+  {
+    "ConditionName": "Chronic Pyelonephritis",
+    "Classification": "Complex renal disorder characterized by chronic tubulointerstitial inflammation and cortical renal scarring.",
+    "Summary": "Chronic pyelonephritis is a renal disorder caused by chronic vesicoureteral reflux, leading to inflammation and scarring in the kidneys. It is more common in children, females, and white patients. It can lead to end-stage renal disease.",
+    "Symptoms": "Symptoms include weight loss, chronic flank pain, nausea, vomiting, headache, malaise, fatigue, cloudy urine. Hypertension develops late in the disease.",
+    "Diagnosis": "Diagnosed clinically and confirmed with imaging studies. Past history of vesicoureteral reflux, UTIs, renal surgery, and renal stones may be suggestive. Laboratory evaluation includes urinalysis, serum creatinine, eGFR, FBC, and electrolyte panel.",
+    "Treatments": "No specific treatment; management includes eliminating recurrent UTIs and correcting underlying urinary problems like obstruction or urolithiasis. Surgical management is required for xanthogranulomatous pyelonephritis and emphysematous pyelonephritis.",
+    "UrgentConsiderations": "Urological consultation is essential for obstruction. Immediate surgical intervention may be necessary in severe cases.",
+    "RedFlags": "Rapid progression to end-stage renal disease, acute renal failure, and severe infections like emphysematous pyelonephritis.",
+    "Medications": "Antibiotics for UTIs; specific surgical procedures may require corresponding perioperative medications.",
+    "ReferralPathways": "Referral to nephrology/urology specialists for complex cases and surgical interventions.",
+    "Referral Template": "Not provided",
+    "SpecialtyID": 12,
+    "SpecialtyName": "Nephrology",
+    "Clinical Assessment": "Not specified in the document."
+  },
+  {
+    "ConditionName": "Chronic Kidney Disease (CKD)",
+    "Classification": "KDIGO Classification: Cause (C), GFR category (G), Albuminuria category (A)",
+    "Summary": "CKD is a common, often undiagnosed condition until advanced stages. It's marked by reduced kidney function or structural abnormalities for \u22653 months, with diabetes mellitus and hypertension being the most common causes. CKD is also a risk factor for cardiovascular disease.",
+    "Symptoms": "Symptoms are often vague, including fatigue, nausea, oedema, anorexia, vomiting, restless legs, pruritus, dyspnoea, orthopnoea, and cognitive impairment. In advanced stages, seizures or coma may occur.",
+    "Diagnosis": "Diagnosed by laboratory evidence of kidney damage, such as proteinuria, haematuria, and a reduction in glomerular filtration rate (GFR).",
+    "Treatments": "Management aims to slow progression and prevent renal replacement therapy. Includes glycemic control in diabetes, blood pressure optimization, use of renin-angiotensin system blockers, SGLT2 inhibitors, and specific anti-hyperglycaemic medications. For hypertension, a combination of antihypertensives including ACE inhibitors and angiotensin-II receptor antagonists.",
+    "UrgentConsiderations": "In GFR categories G4 and G5, focus shifts to preparing for renal replacement therapy, managing comorbidities, and considering kidney transplantation or palliative care.",
+    "RedFlags": "Rapid progression of symptoms, severe hypertension, marked proteinuria, and significant decrease in GFR indicate severe disease progression.",
+    "Medications": "ACE inhibitors, angiotensin-II receptor antagonists, SGLT2 inhibitors (e.g., empagliflozin, canagliflozin, dapagliflozin), statins, ezetimibe, GLP-1 agonists, DPP-4 inhibitors, non-dihydropyridine calcium-channel blockers.",
+    "ReferralPathways": "Referral for nephrology evaluation, especially in advanced stages for renal replacement therapy planning.",
+    "Referral Template": "Not provided",
+    "SpecialtyID": 12,
+    "SpecialtyName": "Nephrology",
+    "Clinical Assessment": "Not specified in the document."
+  }
+]
