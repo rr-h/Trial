@@ -1,0 +1,10 @@
+<svg viewBox="0 0 10 15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Droplet</title>
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g transform="translate(-354.000000, -98.000000)" fill="#ffffff">
+      <g transform="translate(354.000000, 92.000000)">
+        <path d="M5,6 C5,6 -6.25,21 5,21 C16.25,21 5,6 5,6 Z" id="droplet"></path>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+<svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Pill</title>
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g transform="translate(-480.000000, -99.000000)" fill="#ffffff">
+      <g transform="translate(354.000000, 92.000000)">
+        <path d="M132,20.9291111 C128.607706,20.4438815 126,17.5264719 126,14 C126,10.4735281 128.607706,7.55611852 132,7.07088886 L132,20.9291111 Z M134,7.07088886 C137.392294,7.55611852 140,10.4735281 140,14 C140,17.5264719 137.392294,20.4438815 134,20.9291111 L134,7.07088886 Z" id="pill" transform="translate(133.000000, 14.000000) rotate(-45.000000) translate(-133.000000, -14.000000) "></path>
+      </g>
+    </g>
+  </g>
+</svg>
