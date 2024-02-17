@@ -1,0 +1,31 @@
+.font-small {
+    @include core-font(16);
+}
+
+.font-medium {
+    @include core-font(24);
+}
+
+.font-large {
+    @include core-font(36);
+}
+
+.font-xlarge {
+    @include core-font(56);
+}
+
+.bold-small {
+    @include bold-font(16);
+}
+
+.bold-medium {
+    @include bold-font(24);
+}
+
+.bold-large {
+    @include bold-font(36);
+}
+
+.bold-xlarge {
+    @include bold-font(56);
+}

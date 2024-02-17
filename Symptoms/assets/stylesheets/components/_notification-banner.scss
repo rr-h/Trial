@@ -1,0 +1,47 @@
+.notification-banner {
+  background-color: $nhs-grey-04;
+
+  * {
+    @include core-font(16);
+  }
+}
+
+
+.notification-banner--js-hidden {
+  // scss-lint:disable SelectorFormat
+  .js-enabled & {
+    display: none;
+  }
+  // scss-lint:enable SelectorFormat
+}
+
+.notification-banner--hiviz {
+  background-color: tint($nhs-yellow-warm, 25%);
+
+  a {
+    &:link {
+      color: shade($link-colour, 18%);
+    }
+
+    &:visited {
+      color: shade($link-visited-colour, 18%);
+    }
+
+    &:hover {
+      color: shade($link-hover-colour, 18%);
+    }
+
+    &:active {
+      color: shade($link-active-colour, 18%);
+    }
+
+    &:focus {
+      outline: 3px solid $focus-colour;
+    }
+  }
+}
+
+  .notification-banner__inner {
+    @extend %site-width-container;
+    padding: ($baseline-grid-unit * 2) 0;
+  }

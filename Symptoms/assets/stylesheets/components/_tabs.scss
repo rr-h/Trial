@@ -1,0 +1,86 @@
+$_border-colour: $nhs-grey-02;
+
+  .tabs__tab-container {
+    margin-top: 0;
+  }
+
+  .tabs__tab-content {
+    margin-top: 0;
+  }
+
+  .tabs__tab-heading {
+    // scss-lint:disable SelectorFormat
+    .js-enabled & {
+      @extend %visuallyhidden;
+    }
+    // scss-lint:enable SelectorFormat
+  }
+
+  .tabs__nav {
+    @extend %clearfix;
+    display: flex;
+    flex-direction: row;
+    background: $nhs-grey-04;
+    border-width: 0;
+    border-bottom: 4px solid $nhs-grey-03;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .tabs__nav-item {
+    border-width: 0;
+    border-right: 1px solid $nhs-grey-03;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    //min-width: 50%;
+
+    @include media(tablet) {
+      //float: left;
+      //min-width: 25%;
+    }
+
+    + .tabs__nav-item {
+      margin-top: 0;
+    }
+  }
+
+  .tabs__nav-link {
+    background-color: $nhs-grey-04;
+    display: block;
+    margin: 0;
+    padding: $baseline-grid-unit * 4 $baseline-grid-unit * 4;
+    text-align: center;
+
+    &:hover {
+      background-color: $nhs-grey-03;
+      color: $link-colour;
+    }
+
+    &:focus {
+      position: relative;
+      z-index: 5;
+    }
+
+    &:visited {
+      color: $link-colour;
+    }
+
+    .is-active & {
+      background-color: $nhs-blue;
+      color: $nhs-white;
+      cursor: default;
+      text-decoration: none;
+    }
+  }
+
+// scss-lint:disable SelectorFormat
+.js-enabled .js-tabs-content > * {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}

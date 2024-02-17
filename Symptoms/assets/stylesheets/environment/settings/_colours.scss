@@ -1,0 +1,65 @@
+// Colours taken from the reduced colour palette developed for NHS.uk. Dervied from the brand guidelines.
+
+//NHS blues
+
+$nhs-blue: #005EB8;
+$nhs-blue-50: #76ADDA;
+$nhs-blue-10: #E6EFF8;
+$nhs-blue-bright: #0072CE;
+$nhs-blue-dark: #003087;
+
+
+// NHS Greyscale
+// This is an 5 step greyscale.
+// Uses NHS brand colours as a foundation for the first 2 steps. And adds three modified greys
+
+$nhs-grey-01: #425563; // darkest
+$nhs-grey-02: #768692;
+$nhs-grey-03: #AEB7BD;
+$nhs-grey-04: #D8DDE0;
+$nhs-grey-05: #F0F4F5; // lightest
+
+$nhs-black: #231F20;
+$nhs-white: #FFFFFF;
+
+
+// Secondary colours: Green
+
+$nhs-green-dark: #006747;
+$nhs-green: #009639; // modified to comply with WCAG contrast with white
+$nhs-green-light: #78BE20;
+
+
+// Secondary colours: Yellow
+
+$nhs-yellow-warm: #FFB81C;
+$nhs-yellow-warm-50: #FADA8B;
+$nhs-yellow-warm-10: #FDF2D5;
+
+//  Secondary colours: Red
+
+$nhs-emergency-red: #DA291C;
+$nhs-emergency-red-50: #E3968A;
+$nhs-emergency-red-10: #F5E6E4;
+
+
+
+//  Links
+
+$link-colour: $nhs-blue;
+$link-visited-colour: $nhs-blue-dark;
+$link-hover-colour: #4C92D9;
+$link-active-colour: $nhs-blue;
+
+
+$link-reverse-polarity: $nhs-white;
+$link-visited-reverse-polarity: $nhs-white;
+$link-hover-reverse-polarity: #4C92D9;
+$link-active-reverse-polarity: $nhs-white;
+
+$button-background: $nhs-green;
+
+//focus
+
+$focus-colour: $nhs-yellow-warm;
+

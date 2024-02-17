@@ -1,0 +1,143 @@
+@mixin gradient-fade($colour) {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+100 */
+  background: -moz-linear-gradient(left, rgba($colour,0) 0%, rgba($colour,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba($colour,0) 0%,rgba($colour,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba($colour,0) 0%,rgba($colour,1) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00#{$colour}', endColorstr='#{$colour}',GradientType=1 ); /* IE6-9 */
+}
+
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: ($baseline-grid-unit * 4) 0 ($baseline-grid-unit * 8);
+  width: 100%;
+  
+  tr {
+    position: relative;
+  }
+
+  th,
+  td {
+    @include core-font(16);
+    border-bottom: 2px solid $nhs-grey-03;
+    padding: ($baseline-grid-unit * 4) ($baseline-grid-unit * 4) ($baseline-grid-unit * 4) 0;
+    vertical-align: top;
+  }
+
+  th {
+    @include bold-font(16);
+    text-align: left;
+  }
+  
+  caption {
+    @include bold-font(24);
+    text-align: left;
+  }
+  
+  caption + * {
+    @include element-spacing;
+  }
+  
+  ul {
+    @include core-font(16);
+  }
+
+}
+
+.table--horizontal-scroll {
+  position: relative;
+  border: 2px solid $nhs-grey-03;
+  //border-bottom-width: 6px;
+  
+  .table__horizontal-scroll-container {
+    width: 100%;
+    overflow-y: scroll;
+    
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+    }
+
+    &::-webkit-scrollbar:vertical {
+        width: 0;
+    }
+
+    &::-webkit-scrollbar:horizontal {
+        height: 16px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        border: 2px solid $nhs-grey-04; /* should match background, can't be transparent */
+        background-color: $nhs-grey-03;
+    } 
+
+    &::-webkit-scrollbar-track { 
+        background-color: $nhs-grey-03; 
+        border-radius: 0px; 
+    }
+  }
+  
+  table {
+    width: auto;
+    margin: 0;
+    
+    th,
+    td {
+      border-bottom-width: 1px;
+    }
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 50px;
+    @include gradient-fade($nhs-white);
+    height: calc(100% - 16px);
+    right: 0;
+    top: 0;
+    z-index: 100;
+    opacity: 0.9;
+    
+    @include media(tablet){
+      width: 100px;
+    }
+  }
+}
+
+.table--compare {
+  display: block; //reset
+  
+  thead, tbody, tr, th, td {
+    display: block;
+    margin-top: 0;
+  }
+  
+  tr {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  th, td {
+    width: 250px;
+    min-width: 250px;
+    margin-top: ($default-spacing-unit * 2);
+    padding-left: $default-spacing-unit;
+  }
+  
+  .tr-label {
+    position: absolute;
+    left: 0;
+    margin-top: 0;
+    border-bottom: none;
+    @include core-font(16);
+    color: $nhs-grey-02;
+  }
+  
+  .col-label {
+    @include bold-font(16);
+  }
+  
+}

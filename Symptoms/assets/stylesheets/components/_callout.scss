@@ -1,0 +1,53 @@
+.callout {
+  @include element-padding;
+  background-color: $nhs-white;
+
+  &:focus {
+    outline: 3px solid $focus-colour;
+  }
+}
+
+.callout--muted {
+  background-color: $nhs-grey-04;
+}
+
+.callout--info {
+  background-color: $nhs-grey-05;
+  border: solid $nhs-grey-02;
+  border-width: 0 0 0 $baseline-grid-unit;
+}
+
+.callout--attention {
+  border: solid $nhs-blue-bright;
+  border-width: ($baseline-grid-unit * 2);
+  padding: 24px;
+}
+
+.callout--warning {
+  background-color: $nhs-yellow-warm-10;
+  border: solid $nhs-yellow-warm-50;
+  border-width: $baseline-grid-unit 0;
+}
+
+.callout--alert {
+  background-color: $nhs-emergency-red-10;
+  border-top: $baseline-grid-unit * 2 solid $nhs-emergency-red;
+}
+
+.callout--severe {
+  background-color: $nhs-emergency-red-10;
+  color: $nhs-white;
+
+  a {
+    @extend %link--reverse-polarity;
+  }
+}
+
+.callout--error {
+  border: $baseline-grid-unit solid $nhs-emergency-red;
+}
+
+.callout--compact {
+  display: inline-block;
+  padding: $baseline-grid-unit * 4 $baseline-grid-unit * 6;
+}

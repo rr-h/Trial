@@ -1,0 +1,322 @@
+/*********
+ * Cards * 
+ *********/
+
+.in-grid {
+  @include media(tablet){
+    display: flex;
+    flex-wrap: wrap;
+    margin-left:(($default-spacing-unit / 2) * -1); 
+    margin-right:(($default-spacing-unit / 2) * -1); 
+  }
+}
+
+// New unit?
+
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 0.25em;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  overflow: visible;
+  position: relative;
+}
+
+.icon--droplet {
+  top: 1px;
+  background-image: url("../images/droplet.svg");
+}
+
+.icon--pill {
+  top: 1px;
+  background-image: url("../images/pill.svg");
+}
+
+.card {
+  @include element-spacing(bottom);
+  //background-color: $grey-4; remove background colour and set on figcaption
+  display: block;
+  margin-top: 0;
+  vertical-align: top;
+  box-sizing: border-box;
+
+  .in-grid & {
+    @include media(tablet) {
+      //margin-right: $default-spacing-unit;
+      //float: left;
+      max-width: 50%;
+      padding: 0 ($default-spacing-unit / 2);
+    }
+  }
+}
+
+.card__caption,
+.card__caption * {
+  @include core-font(16);
+}
+
+.card__caption {
+  margin-top: 0;
+  padding: $default-spacing-unit;
+  background-color: $nhs-grey-04;
+  border-bottom: 4px solid $nhs-grey-03;
+}
+
+.card--full-width {
+  @include element-spacing;
+  margin-right: 0;
+  max-width: 40em;
+
+  img {
+    width: 100%;
+  }
+}
+
+.card--image {
+  background-color: $nhs-grey-05;
+  border: solid $nhs-grey-04;
+  border-width: 0 0 $baseline-grid-unit 0;
+  margin-right: 0px;
+}
+
+
+/******************
+ * Medicine cards * 
+ ******************/
+
+.card__header {
+  padding: $default-spacing-unit;
+  
+  + * {
+    margin-top: 0;
+  }
+  
+  .card--green & {
+    background: $nhs-green;
+    color: $nhs-white;
+    
+    @include media(tablet) {
+      padding: ($default-spacing-unit * 1.5) ($default-spacing-unit * 2);
+    }
+  
+  }
+}
+
+.card__body {
+  padding: $default-spacing-unit;
+  margin-top: 0;
+  //background: $white;
+  //border: 4px solid $grey-4;
+  @extend %clearfix;
+  
+  .card--green & {
+    
+    @include media(tablet) {
+      padding: ($default-spacing-unit * 1.5) ($default-spacing-unit * 2);
+    }
+  }
+  
+  .card--blue & {
+    padding-bottom: 76px;
+  }
+}
+
+.card__title {
+  @include bold-font(24);
+  
+  .card--green & {
+    display: inline;
+  }
+}
+
+.card__meta {
+  @include core-font(16);
+  margin-top: ($default-spacing-unit / 2);
+  
+  .card--green & {
+    display: inline;
+    margin-left: 1em;
+  }
+}
+
+.card__bar {
+  padding: $default-spacing-unit;
+  
+  .card--green & {
+    background: rgba($nhs-green, 0.1);
+    
+    @include media(tablet) {
+      padding: $default-spacing-unit ($default-spacing-unit * 2);
+    }
+  }
+  
+  .card--blue & {
+    background: $nhs-blue-10; //rgba($light-blue, 0.2);
+  }
+  
+  .card--tabbed & {
+    background: $nhs-grey-04;
+  }
+}
+
+.card__label {
+  @include bold-font(16);
+  
+  + * {
+    margin-top: ($default-spacing-unit / 2);
+  }
+}
+
+.card__col {
+  
+  .card--green &,
+  .card--tabbed & {
+    
+    @include media(tablet) {
+      width: 50%;
+      float: left;
+      box-sizing: border-box;
+      
+      &:first-of-type {
+        padding-right: ($default-spacing-unit / 2);
+      }
+
+       &:last-of-type {
+        padding-left: ($default-spacing-unit / 2);
+      }
+    }
+  }
+}
+
+.card__toggle {
+    padding-top: $default-spacing-unit;
+    border: 4px $nhs-blue-10 solid;
+    border-top: none;
+    text-align: right;
+    background: rgba(255,255,255,0);
+    /* Old Browsers */background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 15%, rgba(255,255,255,0.85) 30%, rgba(255,255,255,1) 45%, rgba(255,255,255,1) 100%);
+    /* FF3.6+ */background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(15%, rgba(255,255,255,0.7)), color-stop(30%, rgba(255,255,255,0.85)), color-stop(45%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+    /* Chrome, Safari4+ */background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 15%, rgba(255,255,255,0.85) 30%, rgba(255,255,255,1) 45%, rgba(255,255,255,1) 100%);
+    /* Chrome10+,Safari5.1+ */background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 15%, rgba(255,255,255,0.85) 30%, rgba(255,255,255,1) 45%, rgba(255,255,255,1) 100%);
+    /* Opera 11.10+ */background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 15%, rgba(255,255,255,0.85) 30%, rgba(255,255,255,1) 45%, rgba(255,255,255,1) 100%);
+    /* IE 10+ */background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 15%, rgba(255,255,255,0.85) 30%, rgba(255,255,255,1) 45%, rgba(255,255,255,1) 100%);
+    /* W3C */filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+    /* IE6-9 */
+
+}
+
+.card__toggle-btn {
+  @extend .button;
+  width: 100%;
+  color: $nhs-blue;
+  @include core-font(16);
+  margin: 0;
+  text-decoration: underline;
+  letter-spacing: 0;
+  background: transparent;
+  position: relative;
+  z-index: 100;
+  
+  &:hover,
+  &:focus,
+  &:active {
+    color: $nhs-blue;
+    background: transparent;
+  }
+}
+
+.card__footer{
+  
+  .card--blue & {
+    border: none;
+    border-bottom: none;
+    position:absolute;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    
+    @include media(tablet) {
+      padding: 0 ($default-spacing-unit / 2);
+    }
+  }
+}
+
+// Override generic style
+.card__footer:last-child {
+  
+  .card--blue & {
+    border-bottom: none;
+  }
+}
+
+
+// Modifiers (shit names)
+
+.card--green {
+  
+  > * {
+    border-left: 2px $nhs-green solid;
+    border-right: 2px $nhs-green solid;
+  }
+  
+  > :first-child {
+    border-top: 2px $nhs-green solid;
+  }
+  
+  > :last-child {
+    border-bottom: 2px $nhs-green solid;
+  }
+}
+
+.card--tabbed {
+  
+  > * {
+    border-left: 4px $nhs-grey-03 solid;
+    border-right: 4px $nhs-grey-03 solid;
+  }
+  
+  > :first-child {
+    //border-top: 2px $green solid;
+  }
+  
+  > :last-child {
+    border-bottom: 4px $nhs-grey-03 solid;
+  }
+}
+
+.card--blue {
+  
+  position: relative;
+  
+  > * {
+    border-left: 4px $nhs-blue-10 solid;
+    border-right: 4px $nhs-blue-10 solid;
+  }
+  
+  > :first-child {
+    border-top: 4px $nhs-blue-10 solid;
+  }
+  
+  > :last-child {
+    border-bottom: 4px $nhs-blue-10 solid;
+  }
+
+  height: 400px;
+  overflow-y: hidden;
+  
+  -webkit-transition: height 0.6s;
+	-moz-transition: height 0.6s;
+	transition: height 0.6s;
+  
+  p, li {
+    @include core-font(16);
+  }
+  
+  &.is-expanded {
+    //height: auto;
+  }
+  
+}
