@@ -1,0 +1,31 @@
+<nav role="navigation" aria-label="Guide pagination">
+  <ul class="article-pagination">
+  
+    {% if next_page %}
+    
+      {% for item, href in next_page %}
+      <li class="article-pagination__item article-pagination__item--right">
+        <a href="/{{ guide_parent}}{{ href }}" rel="next" data-analytics="pagination">
+          <span class="article-pagination__prefix">Next page:</span>
+          <span class="article-pagination__title">{{ item }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    
+    {% endif %}
+    
+    {% if prev_page %}
+    
+      {% for item, href in prev_page %}
+        <li class="article-pagination__item article-pagination__item--left">
+          <a href="/{{ guide_parent}}{{ href }}" rel="prev" data-analytics="pagination">
+          <span class="article-pagination__prefix">Previous page:</span>
+          <span class="article-pagination__title">{{ item }}</span>
+        </a>
+      </li>  
+      {% endfor %}
+  
+    {% endif %}
+    
+  </ul>
+</nav>

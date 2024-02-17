@@ -1,0 +1,28 @@
+{% extends '_layouts/content-simple.nunjucks' %}
+
+{% block main_content %}
+<div class="page-section">
+
+  <div class="grid-row">
+    <div class="column--two-thirds">
+      <div class="reading-width">
+        {% block content_sidebar_last %}{% endblock %}
+      </div>
+    </div>
+    <div class="column--one-third-right">
+      <div class="reading-width">
+        {% block sidebar %}{% endblock %}
+      </div>
+    </div>
+  </div>
+    
+  <div class="grid-row">
+    <div class="column--two-thirds">
+      <div class="reading-width">
+        {% block content_sidebar_last_after %}{% endblock %}
+      </div>
+    </div>
+  </div>
+  
+</div>
+{% endblock %}

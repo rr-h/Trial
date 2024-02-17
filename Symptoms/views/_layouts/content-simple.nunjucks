@@ -1,0 +1,41 @@
+{% extends '_layouts/nhsuk.nunjucks' %}
+{% import '_macros/components.nunjucks' as components %}
+
+{% block content %}
+  <article role="article">
+    {% block local_header %}
+      {% include '_includes/local-header.nunjucks' %}
+    {% endblock %}
+
+    {% block main_content_before %}
+      {% for component in before %}
+        {{ components[component.type](component.content) }}
+      {% endfor %}
+    {% endblock %}
+
+    <div class="page-section">
+      <div class="reading-width">
+        {% block main_content %}
+          {% for component in main %}
+            {{ components[component.type](component.content) }}
+          {% endfor %}
+        {% endblock %}
+      </div>
+    </div>
+
+    {% block main_content_after %}
+      {% if guide %}
+        <div class="page-section">
+          <div class="reading-width">
+            {{ components.pagination(guide.previous, guide.next) }}
+          </div>
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% if nonEmergencyCallout %}
+      {% include '_includes/non-emergency-callout.nunjucks' %}
+    {% endif %}
+
+  </article>
+{% endblock %}
